@@ -36,6 +36,12 @@ public class Triangulo extends Figura{
 
     public double getArea()
     {
+        if(base == 0)
+            throw new BaseNoProvistaException();
+
+        if(area == 0)
+            throw new AlturaNoProvistaException();
+
         area = base * altura / 2;
         return area;
     }
